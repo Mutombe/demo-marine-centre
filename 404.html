@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Marine Centre</title>
+    <script>
+      // SPA shim — store the deep route, redirect to /, main.jsx rehydrates it.
+      (function () {
+        try {
+          var path = window.location.pathname + window.location.search + window.location.hash;
+          sessionStorage.setItem('marine:spa-redirect', path);
+          window.location.replace('/');
+        } catch (e) {
+          window.location.replace('/');
+        }
+      })();
+    </script>
+  </head>
+  <body></body>
+</html>
